@@ -1,0 +1,8 @@
+{
+    "/api/*": {
+        "target": "http://test-hn4s.hydronet.com/beta/",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true
+    }
+}
