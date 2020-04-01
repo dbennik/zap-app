@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "base-angular-app": {
+    "zap-app": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/base-angular-app",
+            "outputPath": "dist/zap-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -63,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "base-angular-app:build"
+            "browserTarget": "zap-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "base-angular-app:build:production"
+              "browserTarget": "zap-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "base-angular-app:build"
+            "browserTarget": "zap-app:build"
           }
         },
         "test": {
@@ -112,16 +112,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "base-angular-app:serve"
+            "devServerTarget": "zap-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "base-angular-app:serve:production"
+              "devServerTarget": "zap-app:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "base-angular-app"
+  "defaultProject": "zap-app"
 }
