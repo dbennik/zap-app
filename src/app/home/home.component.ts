@@ -117,6 +117,24 @@ export class HomeComponent implements OnInit {
   constructor(private mainService: MainService) { }
 
   ngOnInit(): void {
+    this.getZapData();
+  }
+
+  applyZapChance(zapValue: number): void {
+    this.zapOMeter.removeSeries(0);
+    this.zapOMeter.addSeries({
+      type: 'gauge',
+      name: 'Zap Chance',
+      data: [zapValue],
+      tooltip: {
+        valueSuffix: ' %'
+      }
+    }, true, true);
+  }
+  resetZapChance(): void {
+    this.getZapData();
+  }
+  getZapData(): void {
     this.mainService.getTimeSeriesData({
       'Readers': [
         {
@@ -141,23 +159,9 @@ export class HomeComponent implements OnInit {
     }).subscribe((data: any) => {
       this.temperatures = data.Data[0].Data;
       this.humidity = data.Data[1].Data;
-      this.zapOMeter.removePoint(0);
-      this.zapOMeter.addPoint(100 - this.humidity[0].Value);
       this.zapChance.setValue(100 - this.humidity[0].Value);
-      console.log(data);
+      this.applyZapChance(100 - this.humidity[0].Value);
     });
-  }
-
-  applyZapChance(): void {
-    this.zapOMeter.removeSeries(0);
-    this.zapOMeter.addSeries({
-      type: 'gauge',
-      name: 'Zap Chance',
-      data: [this.zapChance.value],
-      tooltip: {
-        valueSuffix: ' %'
-      }
-    }, true, true);
   }
 
 }

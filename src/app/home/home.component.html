@@ -6,7 +6,11 @@
     <mat-error *ngIf="zapChance.invalid">Not a valid number!</mat-error>
   </mat-form-field>
   <br />
-  <button mat-stroked-button (click)="applyZapChance()">
+  <button mat-stroked-button (click)="applyZapChance(zapChance.value)">
     Apply zap chance
+  </button>
+  &nbsp;
+  <button mat-stroked-button (click)="resetZapChance()">
+    Reset to current value
   </button>
 </form>
