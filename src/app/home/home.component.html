@@ -1,3 +1,12 @@
-<mat-list>
-  <mat-list-item *ngFor="let temp of temperatures; let i = index">Date: {{temp.DateTime}}, Temperature: {{temp.Value}}, Humidity: {{humidity[i].Value}} </mat-list-item>
-</mat-list>
+<div [chart]="zapOMeter"></div>
+<form class="example-form">
+  <mat-form-field>
+    <mat-label>Zap Chance (demo)</mat-label>
+    <input matInput type="number" [(value)]="zapChanceValue" [formControl]="zapChance">
+    <mat-error *ngIf="zapChance.invalid">Not a valid number!</mat-error>
+  </mat-form-field>
+  <br />
+  <button mat-stroked-button (click)="applyZapChance()">
+    Apply zap chance
+  </button>
+</form>

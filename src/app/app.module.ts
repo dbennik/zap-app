@@ -7,9 +7,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 
+import { ChartModule, HIGHCHARTS_MODULES } from 'angular-highcharts';
+import * as more from 'highcharts/highcharts-more.src';
+import * as exporting from 'highcharts/modules/exporting.src';
+
 //Angular Material Components
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatButtonModule}  from '@angular/material/button';
+import { MatButtonModule} from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -38,6 +42,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -56,6 +61,7 @@ const appRoutes: Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    ChartModule,
     MatCheckboxModule,
     MatButtonModule,
     MatInputModule,
@@ -88,10 +94,14 @@ const appRoutes: Routes = [
     MatPaginatorModule,
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: false }
-    )
+      {enableTracing: false}
+    ),
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    { provide: HIGHCHARTS_MODULES, useFactory: () => [ more, exporting ] }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
