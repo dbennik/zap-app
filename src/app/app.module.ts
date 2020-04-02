@@ -43,9 +43,11 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { MapComponent } from './map/map.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
+  { path: 'map', component: MapComponent },
   { path: '',
     redirectTo: '/home',
     pathMatch: 'full'
@@ -55,7 +57,8 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
