@@ -16,11 +16,11 @@ export class HomeComponent implements OnInit {
   zapChance = new FormControl('');
 
   today: Date = new Date();
-  currentHour = String(this.today.getHours()).padStart(2, '0');
-  previousHour = String(this.today.getHours() - 1).padStart(2, '0');
-  currentDay = String(this.today.getDate()).padStart(2, '0');
-  currentMonth = String(this.today.getMonth() + 1).padStart(2, '0');
-  currentYear = String(this.today.getFullYear() - 1);
+  currentHour: string = String(this.today.getHours()).padStart(2, '0');
+  previousHour: string = String(this.today.getHours() - 1).padStart(2, '0');
+  currentDay: string = String(this.today.getDate()).padStart(2, '0');
+  currentMonth: string = String(this.today.getMonth() + 1).padStart(2, '0');
+  currentYear: string = String(this.today.getFullYear() - 1);
 
   zapOMeter = new Chart({
     chart: {
