@@ -105,6 +105,7 @@ export class HomeComponent implements OnInit {
       }]
     },
     series: [{
+      type: 'gauge',
       name: 'Zap Chance',
       data: [0],
       tooltip: {
@@ -150,12 +151,13 @@ export class HomeComponent implements OnInit {
   applyZapChance(): void {
     this.zapOMeter.removeSeries(0);
     this.zapOMeter.addSeries({
+      type: 'gauge',
       name: 'Zap Chance',
       data: [this.zapChance.value],
       tooltip: {
         valueSuffix: ' %'
       }
-    });
+    }, true, true);
   }
 
 }
