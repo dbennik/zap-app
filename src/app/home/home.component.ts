@@ -117,6 +117,7 @@ export class HomeComponent implements OnInit {
   constructor(private mainService: MainService) { }
 
   ngOnInit(): void {
+    this.getCurrentLocation();
     this.getZapData();
   }
 
@@ -133,6 +134,16 @@ export class HomeComponent implements OnInit {
   }
   resetZapChance(): void {
     this.getZapData();
+  }
+  getCurrentLocation(): void {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((position: Position) => {
+            if (position) {
+                //this.curPosLat = position.coords.latitude;
+                //this.curPosLng = position.coords.longitude;
+            }
+        })
+    }
   }
   getZapData(): void {
     this.mainService.getTimeSeriesData({

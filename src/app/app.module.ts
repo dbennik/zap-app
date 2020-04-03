@@ -43,7 +43,9 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+
 import { MapComponent } from './map/map.component';
+import { MarkerService } from './marker.service';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -103,7 +105,8 @@ const appRoutes: Routes = [
     ReactiveFormsModule
   ],
   providers: [
-    { provide: HIGHCHARTS_MODULES, useFactory: () => [ more, exporting ] }
+    { provide: HIGHCHARTS_MODULES, useFactory: () => [ more, exporting ] },
+    MarkerService
   ],
   bootstrap: [AppComponent]
 })

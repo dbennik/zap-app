@@ -1,0 +1,30 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [4.45, 51.95] },
+      "properties": { "name": "Rotterdam", "code": "06344" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [4.333, 51.45] },
+      "properties": { "name": "Woensdrecht", "code": "06340" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [4.517, 52.467] },
+      "properties": { "name": "IJmond", "code": "06209" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [4.42, 52.17] },
+      "properties": { "name": "Valkenburg", "code": "06210" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [4.783, 52.917] },
+      "properties": { "name": "De Kooy", "code": "06235" }
+    }
+  ]
+}
