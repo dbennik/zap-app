@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit {
           },
 
     title: {
-      text: 'Change of zapping your cat',
+      text: 'Chance of zapping your cat',
     },
 
     pane: {
@@ -130,7 +130,7 @@ export class HomeComponent implements OnInit {
       data: [zapValue],
       tooltip: {
         valueSuffix: ' %'
-      }
+            }
     }, true, true);
   }
   resetZapChance(): void {
