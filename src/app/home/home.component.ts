@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MainService } from '../main.service';
 import { Chart } from 'angular-highcharts';
 import { FormControl } from '@angular/forms';
+import { PlotLineOrBand } from 'highcharts';
 
 @Component({
   selector: 'app-home',
@@ -28,11 +29,11 @@ export class HomeComponent implements OnInit {
       plotBackgroundColor: null,
       plotBackgroundImage: null,
       plotBorderWidth: 0,
-      plotShadow: false
-    },
+      plotShadow: false,
+          },
 
     title: {
-      text: 'Zap-O-Meter'
+      text: 'Change of zapping your cat',
     },
 
     pane: {

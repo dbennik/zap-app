@@ -1,4 +1,5 @@
-<div [chart]="zapOMeter"></div>
+<div style="text-align: center">
+<div class="meterArea" [chart]="zapOMeter"></div>
 <form>
   <mat-form-field>
     <mat-label>Zap Chance (demo)</mat-label>
@@ -6,11 +7,12 @@
     <mat-error *ngIf="zapChance.invalid">Not a valid number!</mat-error>
   </mat-form-field>
   &nbsp;
-  <button mat-stroked-button (click)="applyZapChance(zapChance.value)">
+  <button mat-raised-button (click)="applyZapChance(zapChance.value)">
     Apply zap chance
   </button>
   &nbsp;
-  <button mat-stroked-button (click)="resetZapChance()">
+  <button mat-raised-button (click)="resetZapChance()">
     Reset to actual value
   </button>
 </form>
+</div>
