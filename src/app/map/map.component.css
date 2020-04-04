@@ -1,17 +1,21 @@
+h1 {
+  font-size:1.2em;
+  text-align: center;
+  color:#666;
+  margin:0
+}
 .map-container {
   position: absolute;
-  top: 65px;
+  top: 80px;
   left: 0;
   right: 0;
   bottom: 0;
   padding: 20px;
 }
-
 .map-frame {
   border: 1px solid #ccc;
   height: 100%;
 }
-
 #map {
   height: 100%;
 }
