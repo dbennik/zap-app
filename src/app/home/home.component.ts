@@ -139,6 +139,7 @@ export class HomeComponent implements OnInit {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition((position: Position) => {
             if (position) {
+              // try to determine a nearby weather station 
                 //this.curPosLat = position.coords.latitude;
                 //this.curPosLng = position.coords.longitude;
             }
