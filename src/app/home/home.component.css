@@ -1,0 +1,12 @@
+#sourcePanel {
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  text-align:center;
+  padding:10px;
+  font-size:0.9em;
+  color:#333;
+  background-color:#fff;
+  opacity:0.5;
+}
