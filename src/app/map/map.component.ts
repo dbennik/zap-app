@@ -25,7 +25,7 @@ export class MapComponent implements OnInit {
 
     this.addBaseMap();
     this.getCurrentLocation();
-    this.markerService.addWeatherStationMarkers(this.map);
+    //this.markerService.addWeatherStationMarkers(this.map);
   }
 
   getCurrentLocation(): void {
