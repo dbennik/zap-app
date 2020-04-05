@@ -11,6 +11,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   top: 0;
   z-index: 1000;
   background-color: black;
+  height:65px
 }
 
 #app-container {
