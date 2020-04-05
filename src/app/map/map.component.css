@@ -1,16 +1,21 @@
 h1 {
   font-size:1.2em;
   text-align: center;
-  color:#666;
-  margin:0
+  color:#333;
+  margin:0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right:0;
+  z-index: 314159;
+  pointer-events: none;
 }
 .map-container {
   position: absolute;
-  top: 80px;
+  top: 55px;
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 20px;
 }
 .map-frame {
   border: 1px solid #ccc;
@@ -18,4 +23,5 @@ h1 {
 }
 #map {
   height: 100%;
+  position:relative
 }
