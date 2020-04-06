@@ -1,0 +1,50 @@
+
+<div id="dateContainer">
+  <mat-card id="dateCard">
+    <mat-card-header>
+        <mat-card-title>Zap chance on date</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form>
+        <mat-form-field>
+          <mat-label>Date</mat-label>
+          <input matInput required [matDatepicker]="myDatepicker" placeholder="Choose a date" [formControl]="targetDate">
+          <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+          <mat-datepicker #myDatepicker></mat-datepicker>
+        </mat-form-field>
+        <!-- <mat-form-field>
+          <mat-label>Weather station</mat-label>
+          <mat-select required [(value)]="selectStationCode">
+            <mat-option *ngFor="let station of weatherstations" [value]="station.code">
+              {{ station.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field> -->
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button (click)="getZapData()">
+        Show zap chance
+      </button>
+    </mat-card-actions>
+    <mat-divider></mat-divider>
+    <mat-card-content style="padding-top:20px">
+      <!-- <p>
+      <label>Date: </label>
+      <span>{{targetDate.value}}</span>
+      </p> --><p>
+      <label>Weather station: </label>
+      <span>{{nearestStationName}}</span>
+      </p><p>
+      <label>Temperature: </label>
+      <span>{{temp}}°C</span>
+      </p><p>
+      <label>Humidity: </label>
+      <span>{{humid}}%</span>
+      </p><p>
+      <label>Zap chance: </label>
+      <span>{{humid}}%</span>
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>

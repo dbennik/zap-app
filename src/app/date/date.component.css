@@ -1,0 +1,12 @@
+#dateContainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#dateCard {
+  width:min-width
+}
+.mat-card {
+  opacity:0.8
+}
