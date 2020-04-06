@@ -3,7 +3,7 @@
 @import "~leaflet/dist/leaflet.css";
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; overflow:hidden}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif}
 
 .main-menu-toolbar {
   position: sticky;
@@ -19,7 +19,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; overflow:hi
   background-image: url(app/assets/images/Bliksem.png);
   background-size: cover;
   height: 100%;
-  overflow:hidden
+  overflow:scroll
 }
 
 .meterArea {
