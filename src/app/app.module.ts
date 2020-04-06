@@ -48,11 +48,13 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MapComponent } from './map/map.component';
 import { MarkerService } from './marker.service';
 import { DateComponent } from './date/date.component';
+import { TipsComponent } from './tips/tips.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'map', component: MapComponent },
   { path: 'date', component: DateComponent },
+  { path: 'tips', component: TipsComponent },
   { path: '',
     redirectTo: '/home',
     pathMatch: 'full'
@@ -64,7 +66,8 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
     MapComponent,
-    DateComponent
+    DateComponent,
+    TipsComponent
   ],
   imports: [
     BrowserModule,

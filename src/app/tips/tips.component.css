@@ -1,0 +1,12 @@
+#tipsContainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#tipsCard {
+  width:min-width
+}
+.mat-card {
+  opacity:0.8
+}
